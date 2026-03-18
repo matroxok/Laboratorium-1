@@ -1,8 +1,6 @@
 namespace Laboratorium_1;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
+using System.Linq;
 
 public class Algorithm
 {
@@ -20,8 +18,15 @@ public class Algorithm
         {
             int value = random.Next(1, 11);
             int weight = random.Next(1, 11);
+
             Items.Add(new Items(i + 1, weight, value));
         }
+    }
+
+    public Algorithm(List<Items> items)
+    {
+        Items = items;
+        ItemsNumber = items.Count;
     }
 
     public Problem Solve(int capacity)
